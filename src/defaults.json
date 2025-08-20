@@ -1,0 +1,15 @@
+{   
+    "modules":[
+        {}
+    ],
+    "gFetch":{
+        "Url":"http://localhost:8000/",
+        "APIRoute":"/api",
+        "Headers":{
+            "Authorization":{
+                "template":"Bearer %",
+                "defaults":[""]
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.cube-body{
+  perspective: 25em;
+}
+
+.cube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    font-size: 8vmin;
+    will-change: transform;
+}
+.cube-face {
+    position: absolute;
+    margin: -2em;
+    width: 4em;
+    height: 4em;
+    backface-visibility: hidden;
+    --i: 0;
+    --j: 1;
+    transform: rotate3d(var(--i), var(--j), 0, var(--a)) translateZ(2em);
+    background-image: var(--img);
+    background-size:100%;
+    box-shadow: inset 0 0 .6em rgba(62, 0, 25, 0.35), 0.15em 0.2em .5em rgba(0,0,0,0.22);
+}
+.cube-face:nth-child(n + 5) {
+  --i: 1;
+  --j: 0;
+}
+.cube-face:nth-child(1) {
+  --a: 0deg;
+  --img: url("/assets/img/dice/1.png");
+}
+.cube-face:nth-child(2) {
+  --a: 90deg;
+  --img: url("/assets/img/dice/2.png");
+}
+.cube-face:nth-child(3) {
+  --a: 180deg;
+  --img: url("/assets/img/dice/6.png");
+}
+.cube-face:nth-child(4) {
+  --a: 270deg;
+  --img: url("/assets/img/dice/5.png");
+}
+.cube-face:nth-child(5) {
+  --a: 90deg;
+  --img: url("/assets/img/dice/4.png");
+}
+.cube-face:nth-child(6) {
+  --a: -90deg;
+  --img: url("/assets/img/dice/3.png");
+}
+@keyframes ani {
+  from {
+    transform: rotateY(2turn) rotateX(2turn);
+  }
+  to {
+    transform: rotateY(1turn) rotateX(1turn);
+  }
+}
