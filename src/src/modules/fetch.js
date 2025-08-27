@@ -140,7 +140,7 @@ class FetchEnv{
         gFetchDataList.push(this);
     }
 }
-let gFetch=new FetchEnv("http://localhost:8000/api",{
+let gFetch=new FetchEnv("http://192.168.30.236:8000/api",{
         "Accept-Language": navigator.language,
     });
 export {FetchEnv, gFetch};

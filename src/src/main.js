@@ -14,12 +14,6 @@ let env = new EnvBS(document.body);
 
 async function init(){
     //Importar bootstrap
-    gFetch.post("/","Esto es un post","json", 1).then(
-        json=>{console.log(json)}
-    );
-    gFetch.post("/","Esto es otro post","json", 1).then(
-        json=>{console.log(json)}
-    );
     await import("/assets/js/bootstrap.bundle.min.js");
     await gThemes.importCssFile("/assets/css/bootstrap.min.css");
     env.createEnv();
